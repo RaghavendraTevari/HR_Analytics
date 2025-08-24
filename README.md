@@ -1,3 +1,4 @@
+<img width="1890" height="742" alt="image" src="https://github.com/user-attachments/assets/d996e4f9-3092-42e8-af95-9265b62929b6" />
 
 
 # HR_Analytics
