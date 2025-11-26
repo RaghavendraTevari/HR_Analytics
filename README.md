@@ -13,15 +13,15 @@ select count(*) from hrdataan;
 
 ## 1 Find the department wise average attrition rate
 
-select Department, round(avg(numofyes) * 100, 2) as Average_attrition_percentage
-from hrdataan
-group by department;
+SELECT department, round(avg(numofyes) * 100, 2) as Average_attrition_percentage
+FROM hrdataan
+GROUP BY department;
 
 ## 2 Find the average hourly rate of male research scientist
 
-select JobRole, Gender , avg(hourlyrate)  as average_hourly_rate from hrdataan
-where JobRole = "Research Scientist" and Gender = "Male"
-group by JobRole;
+SELECT JobRole, Gender , avg(hourlyrate)  as average_hourly_rate from hrdataan
+WHERE JobRole = "Research Scientist" and Gender = "Male"
+GROUP BY JobRole;
 
 ## 3 Find the monthly income wise attrition rate 
 
@@ -38,8 +38,8 @@ group by Department
 order by averageWorkingYears asc; 
 
 ## 5 Find the average attrition rate for year since last promotion
-select RANGEOFYEARS, ROUND(AVG(numofyes) * 100, 2) AS average_attrition_percentage 
-from hrdataan
+SELECT rangeofyears, ROUND(AVG(numofyes) * 100, 2) AS average_attrition_percentage 
+FROM hrdataan
 group by RANGEOFYEARS
 order by average_attrition_percentage asc;
 
